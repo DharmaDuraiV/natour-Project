@@ -7,12 +7,17 @@ const router = express.Router();
 //   console.log(`this is id : ${val}`);
 //   next();
 // });
-router.param('id', tourControllers.checkID);
+// router.param('id', tourControllers.checkID);
+
+// router
+//   .route('/')
+//   .get(tourControllers.getAllTours)
+//   .post(tourControllers.checkBody, tourControllers.createTour);
 
 router
   .route('/')
   .get(tourControllers.getAllTours)
-  .post(tourControllers.checkBody, tourControllers.createTour);
+  .post(tourControllers.createTour);
 router
   .route('/:id')
   .get(tourControllers.getTour)

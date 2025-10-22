@@ -20,22 +20,6 @@ mongoose
     console.log('Error 💥:', err.stack);
   });
 
-const TourSchema = new mongoose.Schema({
-  name: String,
-  age: Number,
-});
-
-const Tour = mongoose.model('tour', TourSchema);
-
-const newtour = new Tour({
-  name: 'Dharma',
-  age: 25,
-});
-
-newtour.save().then((data) => {
-  console.log('data inserted');
-});
-// console.log('Data is inserted');
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port http://localhost:${PORT}/`);
